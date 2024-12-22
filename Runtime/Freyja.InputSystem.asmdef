@@ -1,0 +1,17 @@
+{
+    "name": "Freyja.InputSystem",
+    "rootNamespace": "Freyja.InputSystem",
+    "references": [
+        "GUID:4f3a6fc144c59364badf9579c8601a10",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
