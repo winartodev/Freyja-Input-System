@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Freyja.InputSystem
 {
-    [AddComponentMenu("Freyja InputSystem/Listener/Input Map Listener")]
+    [AddComponentMenu("Freyja/Input System/Input Map")]
     public class InputMap : MonoBehaviour
     {
         #region Fields
