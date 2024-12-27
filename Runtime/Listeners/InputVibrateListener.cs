@@ -102,6 +102,7 @@ namespace Freyja.InputSystem.Vibrate
                 newGameObject.transform.SetParent(transform);
 
                 newGameObject.AddComponent<InputGamepadVibration>();
+                gamepadVibration = newGameObject.GetComponent<InputGamepadVibration>();
             }
 
             if (m_VibrationSchemes == null || m_VibrationSchemes.Count == 0)
