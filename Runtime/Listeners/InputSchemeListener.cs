@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.InputSystem.LowLevel;
 
+using NewInputSystem = UnityEngine.InputSystem.InputSystem;
+
 namespace Freyja.InputSystem
 {
     [AddComponentMenu("Freyja/Input System/Input Scheme Listener")]
@@ -23,12 +25,12 @@ namespace Freyja.InputSystem
 
         private void OnEnable()
         {
-            UnityEngine.InputSystem.InputSystem.onEvent += OnEventChanged;
+            NewInputSystem.onEvent += OnEventChanged;
         }
 
         private void OnDisable()
         {
-            UnityEngine.InputSystem.InputSystem.onEvent -= OnEventChanged;
+            NewInputSystem.onEvent -= OnEventChanged;
         }
 
         private void HandleChangeInputScheme()
@@ -52,7 +54,7 @@ namespace Freyja.InputSystem
             }
 
             var controls = inputDevice.allControls;
-            var buttonPressed = UnityEngine.InputSystem.InputSystem.settings.defaultButtonPressPoint;
+            var buttonPressed = NewInputSystem.settings.defaultButtonPressPoint;
 
             for (var i = 0; i < controls.Count; i++)
             {
