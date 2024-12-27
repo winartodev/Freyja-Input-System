@@ -39,7 +39,7 @@ namespace Freyja.InputSystem.Vibrate
         {
             StopCurrentVibration();
 
-            if (m_InputDeviceTypeListener.ActiveDevice != DeviceType.Gamepad)
+            if (m_InputDeviceTypeListener.ActiveInputDevice != InputDeviceType.Gamepad)
             {
                 return;
             }

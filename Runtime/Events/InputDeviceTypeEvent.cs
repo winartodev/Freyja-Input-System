@@ -16,7 +16,13 @@ namespace Freyja.InputSystem
 
         #region Fields
 
-        public UnityEvent<DeviceType> OnDeviceEvent;
+        public UnityEvent<InputDeviceType> OnDeviceEvent;
+
+        #endregion
+
+        #region Properties
+
+        public InputDeviceType InputDeviceType { get; set; }
 
         #endregion
 
@@ -44,11 +50,12 @@ namespace Freyja.InputSystem
             _events.Remove(deviceEvent);
         }
 
-        public static void HandleChangeInputDevice(DeviceType deviceType)
+        public static void HandleChangeInputDevice(InputDeviceType inputDeviceType)
         {
             for (var i = 0; i < _events.Count; i++)
             {
-                _events[i].OnDeviceEvent?.Invoke(deviceType);
+                _events[i].InputDeviceType = inputDeviceType;
+                _events[i].OnDeviceEvent?.Invoke(inputDeviceType);
             }
         }
 

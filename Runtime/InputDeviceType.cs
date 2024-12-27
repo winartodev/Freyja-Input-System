@@ -1,6 +1,6 @@
 ﻿namespace Freyja.InputSystem
 {
-    public enum DeviceType
+    public enum InputDeviceType
     {
         None,
         Gamepad,

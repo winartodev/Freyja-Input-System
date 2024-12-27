@@ -19,7 +19,7 @@ namespace Freyja.InputSystem
 
         #region Properties
 
-        public DeviceType ActiveDevice { get; private set; }
+        public InputDeviceType ActiveInputDevice { get; private set; }
 
         #endregion
 
@@ -42,14 +42,14 @@ namespace Freyja.InputSystem
                 var inputAction = (InputAction)obj;
                 var activeControl = inputAction.activeControl;
 
-                DeviceType activeDeviceTmp;
+                InputDeviceType activeInputDeviceTmp;
                 if (activeControl.device is Keyboard || activeControl.device is Mouse)
                 {
-                    activeDeviceTmp = DeviceType.Keyboard;
+                    activeInputDeviceTmp = InputDeviceType.Keyboard;
                 }
                 else if (activeControl.device is Gamepad)
                 {
-                    activeDeviceTmp = DeviceType.Gamepad;
+                    activeInputDeviceTmp = InputDeviceType.Gamepad;
                     if (activeControl.device is XInputController)
                     {
                         // TODO: Handle input specific to XInputController (e.g., Xbox controllers). 
@@ -61,20 +61,20 @@ namespace Freyja.InputSystem
                 }
                 else
                 {
-                    activeDeviceTmp = DeviceType.Others;
+                    activeInputDeviceTmp = InputDeviceType.Others;
                 }
 
-                if (ActiveDevice != activeDeviceTmp)
+                if (ActiveInputDevice != activeInputDeviceTmp)
                 {
-                    ActiveDevice = activeDeviceTmp;
-                    InputDeviceTypeEvent.HandleChangeInputDevice(ActiveDevice);
+                    ActiveInputDevice = activeInputDeviceTmp;
+                    InputDeviceTypeEvent.HandleChangeInputDevice(ActiveInputDevice);
                 }
             }
         }
 
-        public InputBinding GetBinding(string actionName, DeviceType deviceType)
+        public InputBinding GetBinding(string actionName, InputDeviceType inputDeviceType)
         {
-            return m_PlayerInput.actions[actionName].bindings[(int)deviceType];
+            return m_PlayerInput.actions[actionName].bindings[(int)inputDeviceType];
         }
 
         private void Reset()
