@@ -92,7 +92,7 @@ namespace Freyja.InputSystem
 
         private static void SortInputMapByPriority()
         {
-            if (_inputMaps.Count <= 0)
+            if (_inputMaps == null || _inputMaps.Count <= 0)
             {
                 return;
             }
