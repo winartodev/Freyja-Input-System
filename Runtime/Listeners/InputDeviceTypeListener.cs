@@ -19,7 +19,7 @@ namespace Freyja.InputSystem
 
         #region Properties
 
-        public DeviceType _activeDevice;
+        public DeviceType ActiveDevice { get; private set; }
 
         #endregion
 
@@ -64,10 +64,10 @@ namespace Freyja.InputSystem
                     activeDeviceTmp = DeviceType.Others;
                 }
 
-                if (_activeDevice != activeDeviceTmp)
+                if (ActiveDevice != activeDeviceTmp)
                 {
-                    _activeDevice = activeDeviceTmp;
-                    InputDeviceTypeEvent.HandleChangeInputDevice(_activeDevice);
+                    ActiveDevice = activeDeviceTmp;
+                    InputDeviceTypeEvent.HandleChangeInputDevice(ActiveDevice);
                 }
             }
         }
