@@ -7,7 +7,7 @@ using NewInputSystem = UnityEngine.InputSystem.InputSystem;
 
 namespace Freyja.InputSystem
 {
-    [AddComponentMenu("Freyja/Input System/Input Scheme Listener")]
+    [AddComponentMenu("Freyja/Input System/Listeners/Input Scheme Listener")]
     [RequireComponent(typeof(PlayerInput))]
     public class InputSchemeListener : MonoBehaviour
     {

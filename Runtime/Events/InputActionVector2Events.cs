@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace Freyja.InputSystem
 {
-    [AddComponentMenu("Freyja/Input System/Input Action Vector2 Events")]
+    [AddComponentMenu("Freyja/Input System/Events/Input Action Vector2 Events")]
     public class InputActionVector2Events : MonoBehaviour
     {
         #region Fields

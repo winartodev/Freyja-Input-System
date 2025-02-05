@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace Freyja.InputSystem
 {
-    [AddComponentMenu("Freyja/Input System/Input Scheme Events")]
+    [AddComponentMenu("Freyja/Input System/Events/Input Scheme Events")]
     public class InputSchemeEvents : MonoBehaviour
     {
         #region Static

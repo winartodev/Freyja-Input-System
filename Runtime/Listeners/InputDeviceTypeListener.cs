@@ -7,7 +7,7 @@ using NewInputSystem = UnityEngine.InputSystem.InputSystem;
 
 namespace Freyja.InputSystem
 {
-    [AddComponentMenu("Freyja/Input System/Input Device Type Listener")]
+    [AddComponentMenu("Freyja/Input System/Listeners/Input Device Type Listener")]
     public class InputDeviceTypeListener : MonoBehaviour
     {
         #region Fields

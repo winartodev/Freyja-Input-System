@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 
 namespace Freyja.InputSystem.Vibrate
 {
-    [AddComponentMenu("Freyja/Input System/Input Vibrate Listener")]
+    [AddComponentMenu("Freyja/Input System/Listeners/Input Vibrate Listener")]
     [RequireComponent(typeof(InputDeviceTypeListener))]
     public class InputVibrateListener : MonoBehaviour
     {

@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace Freyja.InputSystem
 {
-    [AddComponentMenu("Freyja/Input System/Input Action Button Events")]
+    [AddComponentMenu("Freyja/Input System/Events/Input Action Button Events")]
     public class InputActionButtonEvents : MonoBehaviour
     {
         [SerializeField]

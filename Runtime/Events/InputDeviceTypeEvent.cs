@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace Freyja.InputSystem
 {
-    [AddComponentMenu("Freyja/Input System/Input Device Type Event")]
+    [AddComponentMenu("Freyja/Input System/Events/Input Device Type Event")]
     public class InputDeviceTypeEvent : MonoBehaviour
     {
         #region Static

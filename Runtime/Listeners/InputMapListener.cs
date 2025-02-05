@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace Freyja.InputSystem
 {
-    [AddComponentMenu("Freyja/Input System/Input Map Listener")]
+    [AddComponentMenu("Freyja/Input System/Listeners/Input Map Listener")]
     [RequireComponent(typeof(PlayerInput))]
     public class InputMapListener : MonoBehaviour
     {
