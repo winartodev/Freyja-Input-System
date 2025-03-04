@@ -11,7 +11,7 @@ namespace Freyja.InputSystem
         private InputActionProperty m_InputActionProperty;
 
         [Space(10)]
-        public UnityEvent OnInputAction;
+        public UnityEvent<InputAction.CallbackContext> OnInputAction;
 
         private void OnEnable()
         {
@@ -27,7 +27,7 @@ namespace Freyja.InputSystem
 
         private void OnPerformed(InputAction.CallbackContext ctx)
         {
-            OnInputAction?.Invoke();
+            OnInputAction?.Invoke(ctx);
         }
     }
 }
